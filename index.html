@@ -410,8 +410,8 @@
     <h1>Advection&ndash;Diffusion Operator Explorer</h1>
     <p class="subtitle">
       This runs a DeepONet trained on 1500 random source functions for the fixed equation below.
-      Enter a new source function f(x) and it will predict the resulting concentration curve u(x) instantly &mdash;
-      no retraining &mdash; then compare it against a fresh finite-difference solve of the same equation.
+      Enter a new source function f(x) and it will predict the resulting concentration curve u(x) instantly &ndash;
+      no retraining &ndash; then compare it against a fresh finite-difference solve of the same equation.
     </p>
     <div class="equation">
       &kappa; u''(x) + a u'(x) = f(x) &nbsp; <span>with</span> &nbsp; &kappa;=0.1, a=1, u(0)=0, u(1)=1
@@ -467,7 +467,7 @@
       <p class="footnote">
         The network was trained only on smooth, random functions with values roughly in <code>[-1, 1]</code> and length-scale &asymp; 0.1
         (similar to the presets above). Functions far outside that style (very large amplitude, very sharp discontinuities) are
-        out-of-distribution &mdash; the model may extrapolate poorly, which is itself worth observing.
+        out-of-distribution - the model may extrapolate poorly.
       </p>
     </div>
   </div>
