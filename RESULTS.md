@@ -15,14 +15,14 @@ FD reference, never used in training.
 | 100 | 0.00297 | 0.01541 |
 
 **Result:** error decreases monotonically and substantially as training
-resolution increases — a ~5-6x reduction in mean error from N=10 to N=100.
+resolution increases - a ~5-6x reduction in mean error from N=10 to N=100.
 Errors are largest near x=1, where the solution rises steeply and sparse
 data (N=10) under-samples this region. Purely data-driven regression is
 bottlenecked by training data density, as expected.
 
 ## Part 4 - Physics-Informed Neural Network (PINN)
 
-Trained using only the PDE residual and boundary-condition losses — no
+Trained using only the PDE residual and boundary-condition losses - no
 labeled `(x, u(x))` data at any point. Collocation points are resampled
 randomly every epoch rather than held fixed.
 
@@ -30,7 +30,7 @@ randomly every epoch rather than held fixed.
 
 A single seeded run initially suggested collocation count (`N_int`) affects
 accuracy, but **the direction of the effect was not reproducible** across
-machines/seeds — one run found N_int=10 best, another found N_int=100 best.
+machines/seeds - one run found N_int=10 best, another found N_int=100 best.
 This prompted a proper multi-seed check.
 
 ### Multi-seed check (5 seeds per N_int)
@@ -44,12 +44,12 @@ This prompted a proper multi-seed check.
 | 100 | 0.00165 | 0.00060 | 0.00238 |
 
 **Result:** the standard deviation across seeds is comparable to or larger
-than the differences between N_int values — there is **no statistically
+than the differences between N_int values - there is **no statistically
 significant effect of collocation count** on final PINN accuracy in this
 setup. This is a real and interesting contrast with Part 3: since
 collocation points are resampled every epoch (not fixed like the FD
 training grid), N_int does not control "how much information the network
-sees" the way N did for the regression network — it only affects the
+sees" the way N did for the regression network - it only affects the
 per-step batch size, with training noise (random initialization, stochastic
 optimization) dominating any systematic effect.
 
@@ -87,14 +87,14 @@ Trained on 1500 source functions `f` sampled from a Gaussian Random Field
 | 20 | 0.000229 | 0.01008 | 0.06669 |
 | 50 | 0.000274 | 0.01095 | 0.07866 |
 
-**Result:** p=3 is clearly insufficient — too few learned basis functions to
+**Result:** p=3 is clearly insufficient - too few learned basis functions to
 represent the range of solution shapes. From p=5 onward, test error is
 roughly stable (~0.009-0.011 mean), with no meaningful benefit from larger
 p. p=5-10 is an adequate latent dimension for this problem.
 
-An interactive browser demo (`deeponet_explorer.html`) exports the trained
+An interactive browser demo (`index.html`) exports the trained
 network's weights directly into JavaScript, letting anyone test arbitrary
-new source functions against a live FD reference — no Python required.
+new source functions against a live FD reference - no Python required.
 
 ## Overall takeaway
 
