@@ -1,6 +1,6 @@
 # Results
 
-## Part 3 — Data-Driven Regression Network
+## Part 3 - Data-Driven Regression Network
 
 Three MLPs (2 hidden layers, tanh activation) trained on labeled `(x, u(x))`
 pairs from the FD solver at N = 10, 20, 100. Evaluated against a fine N=1000
@@ -20,7 +20,7 @@ Errors are largest near x=1, where the solution rises steeply and sparse
 data (N=10) under-samples this region. Purely data-driven regression is
 bottlenecked by training data density, as expected.
 
-## Part 4 — Physics-Informed Neural Network (PINN)
+## Part 4 - Physics-Informed Neural Network (PINN)
 
 Trained using only the PDE residual and boundary-condition losses — no
 labeled `(x, u(x))` data at any point. Collocation points are resampled
@@ -73,7 +73,7 @@ With N_int = 50 fixed:
 λ_b=1000 — the network sacrifices the PDE almost entirely to force an exact
 boundary match. λ_b=100 gives the best practical balance.
 
-## Part 5 — DeepONet (Operator Learning)
+## Part 5 - DeepONet (Operator Learning)
 
 Trained on 1500 source functions `f` sampled from a Gaussian Random Field
 (length-scale 0.1, rescaled to [-1,1]), using 21 sensor points, with
