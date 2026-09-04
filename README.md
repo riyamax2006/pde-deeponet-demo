@@ -10,7 +10,7 @@ equation (ADE), compared against a classical finite-difference (FD) baseline:
 3. **DeepONet (operator learning)** — trained to solve the equation for *any*
    source function `f(x)`, generalizing without retraining
 
-**[Live interactive demo →](#)** *https://riyamax2006.github.io/pde-deeponet-demo/*
+**[Live interactive demo →](#)** *https://riyamax2006.github.io/neural-network-for-ADE/*
 Type any source function `f(x)` and see the trained DeepONet's prediction
 compared live against a fresh finite-difference solve — runs entirely in
 your browser, no backend.
