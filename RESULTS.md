@@ -39,9 +39,9 @@ This prompted a proper multi-seed check.
 
 | N_int | Avg mean \|error\| | Std dev | Avg max \|error\| |
 |---|---|---|---|
-| 10  | 0.00205 | 0.00122 | 0.00504 |
-| 20  | 0.00236 | 0.00199 | 0.00476 |
-| 100 | 0.00165 | 0.00060 | 0.00238 |
+| 10  | 0.00149 | 0.00073 | 0.00404 |
+| 20  | 0.00251 | 0.00193 | 0.00444 |
+| 100 | 0.00334 | 0.00245 | 0.00501 |
 
 **Result:** the standard deviation across seeds is comparable to or larger
 than the differences between N_int values - there is **no statistically
